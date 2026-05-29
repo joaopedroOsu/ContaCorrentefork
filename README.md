@@ -15,8 +15,11 @@ Selecione uma opção abaixo:
 2 - Saque
 3 - Depósito
 4 - Encerrar conta e sair
+
+Opção: __
 ```
 
+Opção 0
 ```
 ---- MongaBank - Seu dinheiro rende mais! ----
 
@@ -25,7 +28,46 @@ Depósito inicial: 0
 Limite de cheque especial: 100
 
 ```
+Opção 1
+```
+---- MongaBank - Seu dinheiro rende mais! ----
 
+Seu saldo é de: R$ 0,00
+Limite de cheque especial: R$ 100,00
+
+```
+
+Opção 2 - Limite insuficiente
+```
+---- MongaBank - Seu dinheiro rende mais! ----
+
+Cliente: Zé das Couves. 
+Informe um valor para saque: 300
+
+-> Seu limite atual não permite esta operação!
+```
+Opção 2 - Com limite e sem uso do cheque especial
+```
+---- MongaBank - Seu dinheiro rende mais! ----
+
+Cliente: Zé das Couves. 
+Informe um valor para saque: 50
+
+-> Seu saldo é de R$ 50,00
+
+```
+Opção 2 - Com limite e com uso do cheque especial
+```
+---- MongaBank - Seu dinheiro rende mais! ----
+
+Cliente: Zé das Couves. 
+Informe um valor para saque: 150
+
+-> Você está utilizando seu cheque especial
+-> Seu saldo é de -R$ 100,00
+```
+
+Opção 3
 ```
 ---- MongaBank - Seu dinheiro rende mais! ----
 
@@ -35,32 +77,12 @@ Informe um valor para depósito: 100
 -> Seu saldo atual é de R$ 100
 ```
 
+Opção 4
 ```
 ---- MongaBank - Seu dinheiro rende mais! ----
 
-Cliente: Zé das Couves. 
-Informe um valor para saque: 300
+Obrigado por utilizar nossos serviços
 
--> Seu limite atual não permite esta operação!
-```
+Valor a receber: R$ 100,00
 
-```
----- MongaBank - Seu dinheiro rende mais! ----
-
-Cliente: Zé das Couves. 
-Informe um valor para saque: 50
-
--> Você está utilizando seu cheque especial
--> Seu saldo é de R$ 50,00
-
-```
-
-```
----- MongaBank - Seu dinheiro rende mais! ----
-
-Cliente: Zé das Couves. 
-Informe um valor para saque: 150
-
--> Você está utilizando seu cheque especial
--> Seu saldo é de -R$ 100,00
 ```
