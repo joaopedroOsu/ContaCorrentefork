@@ -54,25 +54,74 @@ while (true)
         Console.ReadKey(true);
         continue;
     }
-    else if (opcao == "1")
+    else 
     {
-        
-    }
-    else if (opcao == "2")
-    {
-        
-    }
-    else if (opcao == "3")
-    {
-        
-    }
-    else if (opcao == "4")
-    {
-        break;
-    }
-    else
-    {
-        
+        Console.Clear();
+        Console.WriteLine(TITULO);
+        Console.WriteLine($"Cliente: {nome}");
+
+        if (opcao == "1"){ 
+            Console.WriteLine($"Seu saldo é de: {saldo:C2}");
+            Console.WriteLine($"Limite de cheque especial: {chequeEspecial:C2}");
+        }
+        else if (opcao == "2")
+        {
+            Console.Write("Informe um valor para saque: ");
+            decimal valorSaque = Convert.ToDecimal(Console.ReadLine());
+
+            bool valorEhValido = valorSaque > 0;
+            bool limiteSuficiente = saldo + chequeEspecial >= valorSaque;
+            bool estaUsandoLimite = valorSaque > saldo;
+
+            if(!valorEhValido)
+            {
+                Console.WriteLine("-> Não foi possível realizar sua operação. Tente novamente");
+            }
+            else if(!limiteSuficiente)
+            {
+                Console.WriteLine("-> Seu limite atual não permite esta operação!");
+            }
+            else
+            {
+                if(estaUsandoLimite)
+                {
+                    Console.WriteLine("-> Você está utilizando seu cheque especial");
+                }
+                saldo -= valorSaque;
+                Console.WriteLine("Saque efetuado com sucesso.");
+                Console.WriteLine($"-> Seu saldo é de {saldo:C2}");
+            }
+        }
+        else if (opcao == "3")
+        {
+            Console.Write("Informe um valor para depósito: ");
+            decimal valorDeposito = Convert.ToDecimal(Console.ReadLine());
+
+            bool valorEhValido = valorDeposito > 0;
+            if(!valorEhValido)
+            {
+                Console.WriteLine("-> Não foi possível realizar sua operação. Tente novamente");
+            }
+            else
+            {
+                saldo += valorDeposito;
+                Console.WriteLine("Depósito efetuado com sucesso.");
+                Console.WriteLine($"-> Seu saldo é de {saldo:C2}");
+            }
+        }
+        else if (opcao == "4")
+        {
+            Console.WriteLine("Obrigado por utilizar nossos serviços");
+            Console.WriteLine($"-> Valor a receber: {saldo:C2}");
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Opção Inválida!!!");
+        }
+
     }
 
+    Console.Write("Pressione uma tecla para continuar");
+    Console.ReadKey(true);
 }
