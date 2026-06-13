@@ -20,8 +20,10 @@ while (true)
 {
     Console.Clear();
     
-    Console.WriteLine(TITULO);   
-    Console.Write(MENU);
+    ExibirTitulo();
+
+    ExibirMenu();
+
 
     opcao = Console.ReadLine()!.Trim().Substring(0,1);
 
@@ -125,3 +127,36 @@ while (true)
     Console.Write("Pressione uma tecla para continuar");
     Console.ReadKey(true);
 }
+void ExibirTitulo()
+{
+    string TITULO = @"---- MongaBank - Seu dinheiro rende mais! ----\n";
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.BackgroundColor = ConsoleColor.Black;
+    Console.WriteLine(TITULO);
+    Console.ResetColor();
+}
+
+void ExibirMenu()
+{
+    Console.WriteLine("Selecione uma opção abaixo:");
+    Console.BackgroundColor = ConsoleColor.DarkBlue;
+    Console.WriteLine("0 - Abrir Conta Corrente");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("1 - Saldo");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("2 - Saque");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("3 - Deposito");
+
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("4 - Encerrar conta e sair");
+
+    Console.ResetColor();
+    Console.Write("\n Opcao: ");
+}
+
+
+
